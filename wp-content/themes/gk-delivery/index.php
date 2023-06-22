@@ -67,4 +67,32 @@
         </div>
     </div>
 </section>
+<section class="section section-maps">
+    <div class="container-gl">
+        <div class="map">
+            <div class="container">
+                <div class="map-info">
+                    <?php $map_title = get_field('map_title', 'options');?>
+                    <h3 class="map-title">
+                        <?php echo $map_title;?>
+                    </h3>
+                    <?php $map_text = get_field('map_text', 'options');?>
+                    <div class="map-text">
+                        <?php echo $map_text;?>
+                    </div>
+                    <div class="section-button">
+                        <?php 
+                        $link = get_field('btn_primary');
+                            if( $link ): 
+                            $link_target = $link['target'] ? $link['target'] : '_self';?>
+                            <a class="btn btn-primary" href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['title'] ); ?>">
+                                <?php echo esc_html( $link['title'] ); ?>
+                            </a>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
