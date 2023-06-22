@@ -1,0 +1,86 @@
+.labor {
+    &-global {
+        .section-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .btn-primary {
+                @include media-down('590px') {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    position: relative;
+    z-index: 1;
+    &-discription {
+        text-align: center;
+    }
+    &-title {
+        margin: 0 0 8px 0;
+    }
+    &-text {
+        margin: 8px 0 40px 0;
+    }
+    &-colons-slider {
+        margin: 40px 0 56px;
+        @include media-down('980px') {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+            margin: 40px -12px;
+            .slick-list {
+                padding-right: 95px;
+            
+            }
+        }
+        & .icon-angle-left,
+        & .icon-angle-right {
+            position: absolute;
+            top: 40%;
+        }
+    }
+    &-col {
+        padding: 12px;
+        width: 25%;
+        @include media-down('980px') {
+            padding: 8px;
+            width: 264px ;
+        }
+        &-card {
+            border-radius: 24px;
+            overflow: hidden;
+            background-color: $white;
+            height: 100%;
+            box-shadow: 0px 8px rgba(18, 18, 18, 0.1);
+            min-height: 374px;
+        }
+        &-info {
+            padding: 18px 24px;
+            @include media-down('980px') {
+                padding: 8px 16px;
+            }
+            .number p {
+                color: $color-number;
+                font-weight: 700;
+            }
+        }
+        &-img {
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: center;
+            
+        }
+        &-title {
+            margin: 16px 0 8px;
+        }
+        &-text {
+            margin-top: 8px;
+        }
+    }
+}
+button.slick-prev.slick-arrow,
+button.slick-next.slick-arrow {
+    font-size: 0;
+}
