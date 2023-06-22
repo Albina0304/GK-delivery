@@ -144,4 +144,32 @@
         </div>   
     </div>
 </section>
+<section class="form">
+    <div class="container-gl">
+        <div class="form-global">
+            <div class="container">
+                <div class="form-discription">
+                    <h3 class="form-discription-title">
+                        <?php echo get_field('form_title')?>
+                    </h3>
+                    <div class="form-discription-text">
+                        <?php echo get_field('form_text')?>
+                    </div>
+                </div>
+                <div class="form-contact">
+                    <div class="form-image">
+                        <?php 
+                        $form_image = get_field('form_image', 'options') ;
+                            echo wp_get_attachment_image($form_image['ID'], 'full');?>
+                    </div>
+                    <div class="form-application">
+                        <form action="">
+                            <?php echo do_shortcode('[contact-form-7 id="127" title="Form Application"]');?>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <?php get_footer()?>

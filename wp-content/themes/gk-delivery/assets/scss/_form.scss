@@ -1,0 +1,101 @@
+.form {
+    &-global {
+        background-color: $primary-color;
+        padding: 104px 0;
+    }
+    &-discription {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include media-down('720px') {
+            justify-content: start;
+            align-items: start;
+            text-align: left;
+        }
+        &-title {
+            color: $white;
+            margin-bottom: 8px;
+            width: 60%;
+            @include media-down('920px') {
+                margin-bottom: 4px;
+            }
+            @include media-down('720px') {
+                width: 100%;
+                font-size: 28px;
+                line-height: 32px;
+            }
+        }
+        &-text {
+            margin: 8px 0 40px;
+            @include media-down('920px') {
+                margin: 4px 0 24px;
+            }
+            p {
+                color: $colorText-secondary;
+                @include media-down('720px') {
+                    font-size: 13px;
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+    &-contact {
+        display: flex;
+        position: relative;
+        z-index: 1;
+        @include media-down('920px') {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &-image {
+        margin-right: 12px;
+        @include media-down('920px') {
+            margin: 0 0 12px 0;
+        }
+    }
+    &-wrapper {
+        margin: 32px 0;
+        &-button {
+            margin-top: 40px;
+            @include media-down('960px') {
+                margin-top: 20px;
+            }
+            .btn-secondary {
+                border: none;
+                width: 100%;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+.form-application {
+    margin: -32px 0 -32px 24px;
+    width: 50%;
+    @include media-down('920px') {
+        margin: -20px;
+        width: 100%;
+    }
+    input {
+        padding: 17px 24px;
+        border-radius: 8px;
+        width: 100%;
+        font-size: $base-size;
+        line-height: $base-height;
+        font-weight: 400;
+        @include media-down('720px') {
+            padding: 15px 16px;
+        }
+        &:focus {
+            &::placeholder {
+                font-size: 0;
+            }
+        }
+    }
+}
