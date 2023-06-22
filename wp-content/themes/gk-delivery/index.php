@@ -35,3 +35,36 @@
         </div>
     </div>
 </section>
+<section class="section odds">
+    <div class="container">
+        <?php $odds_title = get_field('odds_title', 'options');?>
+        <div class="odds-discription">
+            <h3 class="odds-title">
+                <?php echo $odds_title;?>
+            </h3>
+            <?php $odds_text = get_field('odds_text', 'options');?>
+            <div class="odds-text">
+                <?php echo $odds_text;?>
+            </div>
+        </div>
+        <div class="odds-colons">
+        <?php $odds_repeater = get_field('odds_repeater', 'options');?>
+            <?php foreach($odds_repeater as $odd_repeater) { ?>
+                <div class="odds-col">
+                    <div class="odds-col-info">
+                        <div class="odds-col-img">
+                            <?php echo wp_get_attachment_image($odd_repeater['image']['ID'], 'thumbnail') ;?>
+                        </div>
+                        <h4 class="odds-col-title">
+                            <?php echo ($odd_repeater['title']) ;?>
+                        </h4>
+                        <div class="odds-col-text">
+                            <?php echo ($odd_repeater['text']) ;?>
+                        </div>
+                    </div>
+                </div>
+            <?php } ;?>
+        </div>
+    </div>
+</section>
+
