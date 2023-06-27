@@ -1,28 +1,31 @@
+            <?php 
+            $footer_logo = get_field('footer_logo', 'options') ;
+            $footer = get_field('footer');?>
             <footer class="footer">
                 <div class="container-gl">
                     <div class="footer-main">
                         <div class="container">
-                            <div class="footer-border-top"></div>
                             <div class="footer-global">
                                 <div class="footer-global-left">
                                     <div class="footer-logo">
-                                        <a href="http://localhost:3000/gk-delivery-wp/">
+                                        <a href="<?php echo get_home_url();?>">
                                             <?php 
-                                            $footer_logo = get_field('footer_logo', 'options') ;
                                             echo wp_get_attachment_image($footer_logo['ID'], 'full');?>
                                         </a>
                                     </div>
-                                    <?php $footer_text = get_field('footer_text', 'options');?>
-                                    <div class="footer-text">
-                                        <?php echo $footer_text;?>
-                                    </div>
+                                    <?php if ($footer['text']) :?>
+                                        <div class="footer-text">
+                                            <?php echo $footer['text'];?>
+                                        </div>
+                                    <?php endif;?>
                                 </div>
                                 <div class="footer-global-right">
                                     <div class="footer-menus">
-                                        <?php $footer_menus_title = get_field('footer_menus_title', 'options');?>
+                                        <?php if ($footer['menus_title']) :?>
                                             <h5 class="footer-menus-title">
-                                                <?php echo $footer_menus_title;?>
+                                                <?php echo $footer['menus_title'];?>
                                             </h5>
+                                        <?php endif;?>
                                         <?php
                                         $menu_args = array(
                                         'menu_class' => 'header-bottom-menus',
@@ -31,10 +34,11 @@
                                         wp_nav_menu($menu_args);?>
                                     </div>
                                     <div class="footer-contacts">
-                                    <?php $footer_contacts_title = get_field('footer_contacts_title', 'options');?>
+                                        <?php if ($footer['contacts_title']) :?>
                                             <h5 class="footer-menus-title">
-                                                <?php echo $footer_contacts_title;?>
+                                                <?php echo $footer['contacts_title'];?>
                                             </h5>
+                                        <?php endif;?>
                                         <nav class="footer-nav">
                                             <ul class="footer-contact">
                                                 <li>
@@ -52,7 +56,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="footer-border-bottom"></div>
                             <?php $copyright = get_field('copyright', 'options');?>
                             <div class="footer-copyright">
                                 &copy;<?php echo $copyright;?>

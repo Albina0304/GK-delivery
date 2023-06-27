@@ -1,13 +1,13 @@
 //=../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
 //=../../node_modules/slick-carousel/slick/slick.min.js
 jQuery(document).ready(function ($) {
-  $('#nav-icon1').click(function(){
+  $('#burger-nav').click(function(){
       $(this).toggleClass('open');
   });
   $('.header-burger').on ('click', function(e) {
       $('.header-wrapper').toggleClass('is-active');
   });
-  $('.labor-colons-slider').slick({
+  $('.colons-slider').slick({
       slidesToShow: 4,
       responsive: [
           {
@@ -31,5 +31,14 @@ jQuery(document).ready(function ($) {
               }
             }
         ]
-    });
+  });
+  $('.form-wrapper input').on('focus', function(e) {
+    $(this).parents('.form-wrapper').find('.label').css('display','none')
+  })
+  $('.form-wrapper input').on('blur', function(e) {
+    $(this).parents('.form-wrapper').find('.label').css('display','block')
+  })
+  $('.form-wrapper .label').on('click', function(e) {
+    $(this).parents('.form-wrapper').find('input').focus();
+  })
 });

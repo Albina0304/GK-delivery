@@ -1,5 +1,6 @@
 .btn {
     border-radius: 8px;
+    cursor: pointer;
 	background-color: $secondary-color;
 	display: inline-block;
 	font-size: $base-size;
@@ -7,11 +8,14 @@
 	font-weight: 700;
 	color: $color-title;
 	text-align: center;
+    border: none;
     padding: 10px 16px;
 	transition: background-color 0.5s steps(4, jump-end),color 0.5s cubic-bezier(0.1, 0.7, 1, 0.1);
 		&:hover,
         &:focus {
             box-shadow: inset 6.5em 0 0 0 var(--hover);
+            color: $color-title;
+            background-color: $secondary-color;
 		}
     &-primary {
         background-color: $secondary-color;

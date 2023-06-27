@@ -2,8 +2,10 @@
     &-global {
         background-color: $primary-color;
         padding: 104px 0;
+        border-top-right-radius: 24px;
+        border-top-left-radius: 24px;
     }
-    &-discription {
+    &-description {
         position: relative;
         z-index: 1;
         text-align: center;
@@ -11,6 +13,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 40px;
         @include media-down('720px') {
             justify-content: start;
             align-items: start;
@@ -30,10 +33,6 @@
             }
         }
         &-text {
-            margin: 8px 0 40px;
-            @include media-down('920px') {
-                margin: 4px 0 24px;
-            }
             p {
                 color: $colorText-secondary;
                 @include media-down('720px') {
@@ -54,15 +53,19 @@
         }
     }
     &-image {
-        margin-right: 12px;
+        margin-right: 24px;
+        display: flex;
         @include media-down('920px') {
-            margin: 0 0 12px 0;
+            margin: 0 0 24px 0;
+
         }
     }
     &-wrapper {
-        margin: 32px 0;
+        margin-bottom: 32px;
+        position: relative;
         &-button {
             margin-top: 40px;
+            margin-bottom: 0;
             @include media-down('960px') {
                 margin-top: 20px;
             }
@@ -73,13 +76,25 @@
                 line-height: 22px;
             }
         }
+        .label {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 24px;
+            transform: translateY(-50%);
+            p {
+                color: $color-text;
+            }
+            span {
+                color: #FF8178;
+            }
+        }
     }
 }
 .form-application {
-    margin: -32px 0 -32px 24px;
+    margin: 0;
     width: 50%;
     @include media-down('920px') {
-        margin: -20px;
         width: 100%;
     }
     input {
@@ -98,4 +113,9 @@
             }
         }
     }
+}
+.wpcf7 form.failed {
+    border-color: #dc3232;
+    color: white;
+    padding: 10px;
 }

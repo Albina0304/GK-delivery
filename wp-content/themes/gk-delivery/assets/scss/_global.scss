@@ -9,6 +9,7 @@
 .container-gl {
     max-width: 1448px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 body {
     font-family: 'Mulish', sans-serif;
@@ -17,6 +18,10 @@ body {
 	color: $color-title;
 	margin: 0;
     background-color: $body;
+}
+a,
+button {
+    cursor: pointer;
 }
 a {
     text-decoration: none;

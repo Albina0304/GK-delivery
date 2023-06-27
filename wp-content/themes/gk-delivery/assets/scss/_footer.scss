@@ -1,109 +1,4 @@
 .footer {
-    &-main {
-        background-color: $primary-color;
-        padding-bottom: 24px;
-    }
-    &-border-top {
-        border: 0.5px solid $border-color;
-        margin-bottom: 104px;
-        @include media-down('520px') {
-            margin-bottom: 32px;
-        }
-    }
-    &-border-bottom {
-        border: 0.5px solid $border-color;
-    }
-    &-text {
-        p {
-            color: $colorText-secondary;
-            font-size: $min-size;
-            line-height: $min-height;
-        }
-    }
-    &-menus {
-        li a {
-            color: $white;
-            font-size: 14px;
-            line-height: 20px;
-            font-weight: 500;
-        }
-        &-title {
-            margin-bottom: 24px;
-        }
-    }
-    &-contacts {
-        @include media-down('520px') {
-            margin-top: 48px;
-        }
-    }
-    &-nav {
-        .footer-contact {
-            li {
-                display: flex;
-                align-items: center;
-                margin-bottom: 24px;
-                &:hover svg path {
-                    fill: #0C29DD;
-                }
-                @include media-down('520px') {
-                    margin-bottom: 32px;
-                }
-
-            }
-        }
-        li a {
-            color: $white;
-            font-size: 14px;
-            line-height: 20px;
-            font-weight: 500;
-            transition: color .3s;
-            &:hover {
-                color: $hover-color;
-            }
-            svg {
-                margin-right: 10px;
-            }
-        }
-    }
-    ul {
-        @include reset-list;
-    }
-    &-copyright {
-        color: $colorText-secondary;
-        font-size: 12px;
-        line-height: 16px;
-        margin-top: 16px;
-    }
-    &-global {
-        display: flex;
-        justify-content: space-between;
-        @include media-down('840px') {
-            flex-direction: column;
-        }
-        &-left {
-            max-width: 40%;
-            @include media-down('840px') {
-                max-width: 100%;
-            }
-        }
-        &-right {
-            display: flex;
-            justify-content: space-around;
-            width: 60%;
-            @include media-down('840px') {
-                width: 100%;
-                justify-content: left;
-                align-items: flex-end;
-            }
-            @include media-down('520px') {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-    }
-    &-menus {
-        margin-right: 104px;
-    }
     #menu-main-1 {
         display: block;
     }
@@ -116,6 +11,9 @@
         a {
             padding: 0;
         }
+    }
+    ul {
+        @include reset-list;
     }
     .social {
         display: flex;
@@ -131,13 +29,105 @@
             }
         }
     }
-    &-logo {
-        margin-bottom: 25px;
-    }
-    &-text {
-        margin-bottom: 104px;
-        @include media-down('840px') {
-            margin-bottom: 48px;
+    &-main {
+        background-color: $primary-color;
+        padding-bottom: 24px;
+        border-bottom-right-radius: 24px;
+        border-bottom-left-radius: 24px;
+        .footer-copyright {
+            color: $colorText-secondary;
+            font-size: 12px;
+            line-height: 16px;
+            margin-top: 16px;
+        }
+        .footer-global {
+            display: flex;
+            justify-content: space-between;
+            border-top: 0.5px solid $border-color;
+            border-bottom: 0.5px solid $border-color;
+            padding-top: 104px;
+            @include media-down('840px') {
+                flex-direction: column;
+            }
+            &-right {
+                display: flex;
+                justify-content: space-around;
+                width: 60%;
+                @include media-down('840px') {
+                    width: 100%;
+                    justify-content: left;
+                    align-items: flex-end;
+                }
+                @include media-down('520px') {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                .footer-menus {
+                    margin-right: 104px;
+                    li a {
+                        color: $white;
+                        font-size: 14px;
+                        line-height: 20px;
+                        font-weight: 500;
+                        &:hover {
+                            color: $hover-color;
+                        }
+                    }
+                    &-title {
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+            &-left {
+                max-width: 40%;
+                margin-bottom: 104px;
+                @include media-down('840px') {
+                    max-width: 100%;
+                    margin-bottom: 48px;
+                }
+                .footer-text {
+                    @include media-down('840px') {
+                        margin-bottom: 48px;
+                    }
+                    p {
+                        color: $colorText-secondary;
+                        font-size: $min-size;
+                        line-height: $min-height;
+                    }
+                }
+                .footer-logo {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+        .footer-contacts {
+            @include media-down('520px') {
+                margin-top: 48px;
+            }
+            .footer-contact {
+                li a {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 24px;
+                    color: $white;
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 500;
+                    transition: color .3s;
+                    &:hover {
+                        color: $hover-color;
+                    }
+                    svg {
+                        margin-right: 10px;
+                    }
+                    &:hover svg path {
+                        fill: $hover-color;
+                    }
+                    @include media-down('520px') {
+                        margin-bottom: 32px;
+                    }
+                }
+            }
         }
     }
 }
