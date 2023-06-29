@@ -27,9 +27,9 @@
         }
         &-left {
             max-width: 45%;
-            padding: 199px 53px 199px 44px;
+            margin: 199px 20px 199px 44px;
             @include media-down('1120px') {
-                padding: 99px 0 99px 44px;
+                margin: 99px 20px 99px 44px;
             }
             @include media-down('872px') {
                 padding: 29px 40px 68px 40px;
@@ -43,10 +43,8 @@
             }
             .hero-title {
                 margin-bottom: 16px;
-                @include media-down('1282px') {
-                    font-size: 56px;
-                    line-height: 58px;
-                }
+                font-size: 56px;
+                line-height: 58px;
                 @include media-down('1120px') {
                     font-size: 42px;
                     line-height: 44px;

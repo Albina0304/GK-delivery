@@ -42,10 +42,26 @@ jQuery(document).ready(function ($) {
     $(this).parents('.form-wrapper').find('.label').css('display','none')
   })
   $('.form-wrapper input').on('blur', function(e) {
-    $(this).parents('.form-wrapper').find('.label').css('display','block')
+    if(!$(this).val()) {
+      $(this).parents('.form-wrapper').find('.label').css('display','block')
+    }
   })
   $('.form-wrapper .label').on('click', function(e) {
     $(this).parents('.form-wrapper').find('input').focus();
+  })
+  $('.form-application .wpcf7').on('wpcf7mailsent', function() {
+    $('#confirmation').modal('toggle');
+    $(this).find('.form-wrapper .label').css('.label').css('display','block')
+    setTimeout(function() {
+      $('#confirmation').modal('toggle');
+    }, 2000)
+  })
+  $('html').bind('mouseleave', function() {
+    $('#modal-out').modal('show')
+    $('html').unbind('mouseleave');
+  })
+  $('.section-button .btn').on('click', function() {
+    $('#modal-out').modal('hide');
   })
 });
 //# sourceMappingURL=main.js.map

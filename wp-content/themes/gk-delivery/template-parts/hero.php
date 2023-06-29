@@ -22,7 +22,7 @@ $hero = get_field('hero');?>
                     $link = get_field('btn_primary');
                         if( $link ): 
                         $link_target = $link['target'] ? $link['target'] : '_self';?>
-                        <a class="btn btn-secondary" href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['title'] ); ?>">
+                        <a class="btn btn-secondary" href="#contacts" target="<?php echo esc_attr( $link['title'] ); ?>">
                             <?php echo esc_html( $link['title'] ); ?>
                         </a>
                     <?php endif; ?>
@@ -31,9 +31,7 @@ $hero = get_field('hero');?>
             <div class="hero-general-right">
                 <?php if ($hero['image']) :?>
                     <div class="hero-general-right-img">
-                        <?php 
-                        $hero_image = get_field('hero_image') ;
-                        echo wp_get_attachment_image($hero_image['ID'], 'full');?>
+                        <?php echo wp_get_attachment_image($hero['image']['ID'], 'full');?>
                     </div>
                 <?php endif; ?>
             </div>

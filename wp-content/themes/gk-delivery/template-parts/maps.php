@@ -20,7 +20,7 @@ $maps = get_field('maps');?>
                         $link = get_field('btn_primary');
                             if( $link ): 
                             $link_target = $link['target'] ? $link['target'] : '_self';?>
-                            <a class="btn btn-primary" href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['title'] ); ?>">
+                            <a class="btn btn-primary" href="#contacts" target="<?php echo esc_attr( $link['title'] ); ?>">
                                 <?php echo esc_html( $link['title'] ); ?>
                             </a>
                         <?php endif; ?>

@@ -15,27 +15,30 @@ $odds = get_field('odds');?>
             <?php endif;?>
         </div>
         <div class="odds-colons">
-            <?php foreach($odds['repeater'] as $odd_repeater) { ?>
-                <div class="odds-col">
-                    <div class="odds-info">
-                        <?php if ($odd_repeater['image']) :?>
-                            <div class="odds-img">
-                                <?php echo wp_get_attachment_image($odd_repeater['image']['ID'], 'thumbnail') ;?>
-                            </div>
-                        <?php endif;?> 
-                        <?php if ($odd_repeater['title']) :?>
-                            <h4 class="odds-title">
-                                <?php echo ($odd_repeater['title']) ;?>
-                            </h4>
-                        <?php endif;?>
-                        <?php if ($odd_repeater['text']) :?>
-                            <div class="odds-text">
-                                <?php echo ($odd_repeater['text']) ;?>
-                            </div>
-                        <?php endif;?>   
+            <?php
+            if(isset($odds['repeater'])):
+                foreach($odds['repeater'] as $odd_repeater) { ?>
+                    <div class="odds-col">
+                        <div class="odds-info">
+                            <?php if ($odd_repeater['image']) :?>
+                                <div class="odds-img">
+                                    <?php echo wp_get_attachment_image($odd_repeater['image']['ID'], 'thumbnail') ;?>
+                                </div>
+                            <?php endif;?> 
+                            <?php if ($odd_repeater['title']) :?>
+                                <h4 class="odds-title">
+                                    <?php echo ($odd_repeater['title']) ;?>
+                                </h4>
+                            <?php endif;?>
+                            <?php if ($odd_repeater['text']) :?>
+                                <div class="odds-text">
+                                    <?php echo ($odd_repeater['text']) ;?>
+                                </div>
+                            <?php endif;?>   
+                        </div>
                     </div>
-                </div>
-            <?php } ;?>
+                <?php } ;
+            endif;?>
         </div>
     </div>
 </section>

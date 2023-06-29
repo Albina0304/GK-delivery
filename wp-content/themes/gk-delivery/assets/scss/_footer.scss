@@ -1,5 +1,7 @@
 .footer {
-    #menu-main-1 {
+    #menu-main-1,
+    #menu-main-ru-1,
+    #menu-menu-pl-1 {
         display: block;
     }
     .menu-item {
@@ -42,7 +44,6 @@
         }
         .footer-global {
             display: flex;
-            justify-content: space-between;
             border-top: 0.5px solid $border-color;
             border-bottom: 0.5px solid $border-color;
             padding-top: 104px;
@@ -51,8 +52,8 @@
             }
             &-right {
                 display: flex;
-                justify-content: space-around;
-                width: 60%;
+                justify-content: space-evenly;
+                width: 100%;
                 @include media-down('840px') {
                     width: 100%;
                     justify-content: left;
@@ -63,7 +64,6 @@
                     align-items: flex-start;
                 }
                 .footer-menus {
-                    margin-right: 104px;
                     li a {
                         color: $white;
                         font-size: 14px;
@@ -79,7 +79,7 @@
                 }
             }
             &-left {
-                max-width: 40%;
+                max-width: 35%;
                 margin-bottom: 104px;
                 @include media-down('840px') {
                     max-width: 100%;
@@ -119,6 +119,10 @@
                     }
                     svg {
                         margin-right: 10px;
+                        transition: color .3s;
+                        & path {
+                            transition: fill .3s;
+                        }
                     }
                     &:hover svg path {
                         fill: $hover-color;

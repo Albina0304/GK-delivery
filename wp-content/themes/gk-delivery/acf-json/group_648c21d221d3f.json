@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_648c246cfd90a",
-            "label": "General Settings",
+            "label": "Загальні налаштування",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -20,7 +20,7 @@
         },
         {
             "key": "field_648c220e405a8",
-            "label": "Logo",
+            "label": "Логотип",
             "name": "logo",
             "type": "image",
             "instructions": "",
@@ -43,32 +43,8 @@
             "mime_types": ""
         },
         {
-            "key": "field_649405ba15fd7",
-            "label": "Footer Logo",
-            "name": "footer_logo",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
             "key": "field_648c221c405a9",
-            "label": "Phone",
+            "label": "Телефон",
             "name": "phone",
             "type": "text",
             "instructions": "",
@@ -87,7 +63,7 @@
         },
         {
             "key": "field_648c225b405aa",
-            "label": "Email",
+            "label": "Електронна Пошта",
             "name": "email",
             "type": "email",
             "instructions": "",
@@ -105,7 +81,7 @@
         },
         {
             "key": "field_648c2266405ab",
-            "label": "Socials",
+            "label": "Соціальні Іконки",
             "name": "socials",
             "type": "repeater",
             "instructions": "",
@@ -124,7 +100,7 @@
             "sub_fields": [
                 {
                     "key": "field_648c27096b051",
-                    "label": "icon",
+                    "label": "Зображення іконок",
                     "name": "icon",
                     "type": "image",
                     "instructions": "",
@@ -148,7 +124,7 @@
                 },
                 {
                     "key": "field_648c272a6b052",
-                    "label": "Link",
+                    "label": "Посилання",
                     "name": "link",
                     "type": "url",
                     "instructions": "",
@@ -165,43 +141,8 @@
             ]
         },
         {
-            "key": "field_648c24f1fd90b",
-            "label": "Header",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_648c251efd90c",
-            "label": "Call to action",
-            "name": "call_to_action",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_64940770c72aa",
-            "label": "Footer Settings",
+            "label": "Налаштування нижньої секції",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -214,10 +155,34 @@
             },
             "placement": "top",
             "endpoint": 0
+        },
+        {
+            "key": "field_649405ba15fd7",
+            "label": "Логотип Нижньої Секції",
+            "name": "footer_logo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
             "key": "field_648c257cfd90f",
-            "label": "Copyright",
+            "label": "Авторське право",
             "name": "copyright",
             "type": "text",
             "instructions": "",
@@ -236,7 +201,7 @@
         },
         {
             "key": "field_649575e72a51b",
-            "label": "Modal Settings",
+            "label": "Модальні налаштування",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -252,8 +217,8 @@
         },
         {
             "key": "field_649576102a51c",
-            "label": "Modal Confiramtion",
-            "name": "modal_confiramtion",
+            "label": "Модал при підтвердженні",
+            "name": "modal_confirmation",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -267,7 +232,7 @@
             "sub_fields": [
                 {
                     "key": "field_649576922a51e",
-                    "label": "Image",
+                    "label": "Зображення",
                     "name": "image",
                     "type": "image",
                     "instructions": "",
@@ -291,7 +256,7 @@
                 },
                 {
                     "key": "field_649576b42a51f",
-                    "label": "Title",
+                    "label": "Заголовок",
                     "name": "title",
                     "type": "text",
                     "instructions": "",
@@ -310,7 +275,7 @@
                 },
                 {
                     "key": "field_649576bc2a520",
-                    "label": "Text",
+                    "label": "Текст",
                     "name": "text",
                     "type": "wysiwyg",
                     "instructions": "",
@@ -331,7 +296,7 @@
         },
         {
             "key": "field_6495766c2a51d",
-            "label": "Modal Out",
+            "label": "Модал при виході",
             "name": "modal_out",
             "type": "group",
             "instructions": "",
@@ -346,7 +311,7 @@
             "sub_fields": [
                 {
                     "key": "field_649576ca2a521",
-                    "label": "Image",
+                    "label": "Зображення",
                     "name": "image",
                     "type": "image",
                     "instructions": "",
@@ -370,7 +335,7 @@
                 },
                 {
                     "key": "field_649576d22a522",
-                    "label": "Title",
+                    "label": "Заголовок",
                     "name": "title",
                     "type": "text",
                     "instructions": "",
@@ -389,7 +354,7 @@
                 },
                 {
                     "key": "field_649576da2a523",
-                    "label": "Text",
+                    "label": "Текст",
                     "name": "text",
                     "type": "wysiwyg",
                     "instructions": "",
@@ -427,5 +392,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687530158
+    "modified": 1688027532
 }

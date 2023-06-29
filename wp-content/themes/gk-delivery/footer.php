@@ -7,12 +7,13 @@
                         <div class="container">
                             <div class="footer-global">
                                 <div class="footer-global-left">
-                                    <div class="footer-logo">
-                                        <a href="<?php echo get_home_url();?>">
-                                            <?php 
-                                            echo wp_get_attachment_image($footer_logo['ID'], 'full');?>
-                                        </a>
-                                    </div>
+                                    <?php if ($footer_logo['ID']) :?>
+                                        <div class="footer-logo">
+                                            <a href="<?php echo get_home_url();?>">
+                                                <?php echo getImage($footer_logo);?>
+                                            </a>
+                                        </div>
+                                    <?php endif;?>
                                     <?php if ($footer['text']) :?>
                                         <div class="footer-text">
                                             <?php echo $footer['text'];?>
@@ -28,8 +29,8 @@
                                         <?php endif;?>
                                         <?php
                                         $menu_args = array(
-                                        'menu_class' => 'header-bottom-menus',
-                                        'container' => 'nav'
+                                            'theme_location' => 'main',
+                                            'menu_class' => 'footer-global-right footer-menus'
                                         );
                                         wp_nav_menu($menu_args);?>
                                     </div>
