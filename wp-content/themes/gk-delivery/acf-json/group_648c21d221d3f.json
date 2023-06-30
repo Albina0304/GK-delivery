@@ -1,6 +1,6 @@
 {
     "key": "group_648c21d221d3f",
-    "title": "Theme Settings",
+    "title": "Налаштування теми",
     "fields": [
         {
             "key": "field_648c246cfd90a",
@@ -392,5 +392,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688027532
+    "modified": 1688122902
 }

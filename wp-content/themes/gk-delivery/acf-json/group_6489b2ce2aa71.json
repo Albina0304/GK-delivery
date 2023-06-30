@@ -589,7 +589,7 @@
         },
         {
             "key": "field_649d41ebcdb1e",
-            "label": "Форми",
+            "label": "Форма",
             "name": "forms",
             "type": "group",
             "instructions": "",
@@ -759,5 +759,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688027793
+    "modified": 1688122965
 }

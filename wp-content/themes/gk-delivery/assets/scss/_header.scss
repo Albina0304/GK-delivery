@@ -21,6 +21,12 @@
                 }
             }
         }
+        .dropdown-toggle {
+            text-transform: uppercase;
+            svg {
+                margin-right: 8px;
+            }
+        }
         #menu-languages {
             @include reset-list;
             margin-bottom: -16px;

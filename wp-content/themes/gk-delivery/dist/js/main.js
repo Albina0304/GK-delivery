@@ -38,7 +38,7 @@ jQuery(document).ready(function ($) {
             }
         ]
   });
-  $('.form-wrapper input').on('focus', function(e) {
+  $('.form-wrapper input').on('focus input', function(e) {
     $(this).parents('.form-wrapper').find('.label').css('display','none')
   })
   $('.form-wrapper input').on('blur', function(e) {
@@ -51,17 +51,17 @@ jQuery(document).ready(function ($) {
   })
   $('.form-application .wpcf7').on('wpcf7mailsent', function() {
     $('#confirmation').modal('toggle');
-    $(this).find('.form-wrapper .label').css('.label').css('display','block')
+    $(this).find('.form-wrapper .label').css('display','block')
     setTimeout(function() {
       $('#confirmation').modal('toggle');
     }, 2000)
   })
-  $('html').bind('mouseleave', function() {
-    $('#modal-out').modal('show')
-    $('html').unbind('mouseleave');
-  })
-  $('.section-button .btn').on('click', function() {
-    $('#modal-out').modal('hide');
-  })
+  // $('html').bind('mouseleave', function() {
+  //   $('#modal-out').modal('show')
+  //   $('html').unbind('mouseleave');
+  // })
+  // $('.section-button .btn').on('click', function() {
+  //   $('#modal-out').modal('hide');
+  // })
 });
 //# sourceMappingURL=main.js.map
