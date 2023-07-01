@@ -25,6 +25,9 @@
             justify-content: start;
             margin: 0 -21px 32px -21px;
         }
+        span {
+            display: none;
+        }
         li {
             @include media-down('840px') {
                 padding: 0 21px;

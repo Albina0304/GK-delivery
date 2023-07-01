@@ -11,10 +11,6 @@
     }
     .hero-text p {
         color: $colorText-secondary;
-        @include media-down('1120px') {
-            font-size: 13px;
-            line-height: 19px;
-        }
     }
     .hero-general {
         background-color: $primary-color;
@@ -43,12 +39,6 @@
             }
             .hero-title {
                 margin-bottom: 16px;
-                font-size: 56px;
-                line-height: 58px;
-                @include media-down('1120px') {
-                    font-size: 42px;
-                    line-height: 44px;
-                }
                 @include media-down('480px') {
                     margin-bottom: 4px;
                 }

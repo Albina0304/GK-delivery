@@ -3,8 +3,11 @@
     <?php if(isset($socials)):
         foreach($socials as $social) { ?>
             <li>
-                <a href="<?php echo $social['link'];?>">
+                <a href="<?php echo $social['link'];?>" target="blank">
                     <?php echo getImage($social['icon']);?>
+                    <span class="title">
+                        <?php echo ($social['title']) ;?>
+                    </span>
                 </a>
             </li>
         <?php } ;?>

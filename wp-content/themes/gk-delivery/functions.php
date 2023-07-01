@@ -39,6 +39,7 @@ add_image_size( 'primary', 282, 126 );
 add_image_size( 'sm-img', 77, 80 );
 add_image_size( 'form-img', 588, 328 );
 add_image_size( 'logo-size', 122, 34 );
+add_image_size( 'logo-size', 101, 28 );
 function getImage($image) {
     if($image['mime_type'] !== 'image/svg+xml'):
     return wp_get_attachment_image($image['ID'], 'full');

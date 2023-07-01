@@ -11,10 +11,10 @@
     }
     &-text {
         margin: 8px 0 40px 0;
-        @include media-down('890px') {
-            font-size: 13px;
-            line-height: 19px;
-        }
+        // @include media-down('890px') {
+        //     font-size: 13px;
+        //     line-height: 19px;
+        // }
         strong {
             color: $strong-text;
             font-weight: normal;
@@ -69,11 +69,11 @@
         @include media-down('890px') {
             margin-top: 4px;
         }
-        p {
-            @include media-down('890px') {
-                font-size: 13px;
-                line-height: 19px;
-            }
-        }
+        // p {
+        //     @include media-down('890px') {
+        //         font-size: 13px;
+        //         line-height: 19px;
+        //     }
+        // }
     }
 }

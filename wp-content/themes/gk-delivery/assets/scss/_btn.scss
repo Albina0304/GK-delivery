@@ -18,14 +18,18 @@
             background-color: $secondary-color;
 		}
     &-primary {
-        background-color: $secondary-color;
         position: relative;
         z-index: 1;
         padding: 12px 40px;
         overflow: hidden;
+        @include media-down('540px') {
+            padding: 8px 12px;
+            font-size: $mobile-size;
+            line-height: $mobile-height;
+        }
         &::after {
             content: '';
-            background-color: #FFA901;
+            background-color: $hover-btn;
             position: absolute;
             top: 0;
             left: -100%;

@@ -39,6 +39,10 @@ p {
     line-height: $base-height;
     color: $color-text;
     margin: 0;
+    @include media-down('890px') {
+        font-size: $mobile-size;
+        line-height: $mobile-height;
+    }
 }
 h1 {
     font-weight: 700;
@@ -46,6 +50,14 @@ h1 {
 	line-height: 68px;
 	margin: 0;
     color: $white;
+    @include media-down('1300px') {
+        font-size: 56px;
+        line-height: 58px;
+    }
+    @include media-down('1120px') {
+        font-size: $mobile-big-size;
+        line-height: $mobile-big-height;
+    }
 }
 h3 {
     font-weight: 700;

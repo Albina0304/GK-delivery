@@ -30,8 +30,8 @@
             p {
                 color: $colorText-secondary;
                 @include media-down('740px') {
-                    font-size: 13px;
-                    line-height: 19px;
+                    // font-size: 13px;
+                    // line-height: 19px;
                 }
             }
         }
