@@ -7,7 +7,7 @@
     .menu-item {
         padding: 0;
         margin-bottom: 16px;
-        @include media-down('520px') {
+        @include media-down(s) {
             margin-bottom: 24px;
         }
         a {
@@ -21,19 +21,57 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @include media-down('840px') {
+        @include media-down(md) {
             justify-content: start;
-            margin: 0 -21px 32px -21px;
+            margin: -8px -21px 0 -21px;
         }
         span {
             display: none;
         }
         li {
-            @include media-down('840px') {
+            @include media-down(md) {
                 padding: 0 21px;
+            }
+            a {
+                svg path {
+                    transition: fill 0.3s; 
+                }
+                &:hover svg path {
+                    fill: $color-number;
+                }
             }
         }
     }
+    #scroll {
+        display: none;
+        position: fixed;
+        margin: 0 170px 30px 0;
+        bottom: 0;
+        right: 0;
+        z-index: 99;
+        font-size: $min-size;
+        line-height: $min-height;
+        border: none;
+        outline: none;
+        color: $white;
+        cursor: pointer;
+        transition: color 0.3s;
+        background-color: rgba(4, 37, 89, 0.3);
+        padding: 10px;
+        border-radius: 10px;
+        svg {
+            margin-left: 8px;
+            path {
+                transition: fill 0.3s;  
+            }
+        }
+        &:hover svg path{
+            fill: $color-number;
+        }
+      }
+      #scroll:hover {
+        color: $color-number;
+      }
     &-main {
         background-color: $primary-color;
         padding-bottom: 24px;
@@ -41,57 +79,70 @@
         border-bottom-left-radius: 24px;
         .footer-copyright {
             color: $colorText-secondary;
-            font-size: 12px;
-            line-height: 16px;
-            margin-top: 16px;
+            font-size: $min-size;
+            line-height: $min-height;
+            margin: 16px 0;
         }
         .footer-global {
             display: flex;
             border-top: 0.5px solid $border-color;
             border-bottom: 0.5px solid $border-color;
             padding-top: 104px;
-            @include media-down('840px') {
+            @include media-down(md) {
                 flex-direction: column;
+                padding-top: 32px;
             }
             &-right {
                 display: flex;
                 justify-content: space-evenly;
                 width: 100%;
-                @include media-down('840px') {
-                    width: 100%;
-                    justify-content: left;
-                    align-items: flex-end;
+                @include media-down(md) {
+                    width: 80%;
+                    justify-content: space-between;
+                    margin-bottom: 24px;
                 }
-                @include media-down('520px') {
+                @include media-down(sm) {
+                    width: 100%;
+                }
+                @include media-down(s) {
                     flex-direction: column;
-                    align-items: flex-start;
+                    align-itemd: flex-start;
                 }
                 .footer-menus {
+                    padding-left: 52px;
+                    padding-right: 62px;
+                    letter-spacing: 0.6px;
+                    @include media-down(md) {
+                        width: 100%;
+                        padding: 0;
+                    }
                     li a {
                         color: $white;
                         font-size: 14px;
                         line-height: 20px;
                         font-weight: 500;
+                        transition: color 0.3s;
                         &:hover {
                             color: $hover-color;
                         }
                     }
-                    &-title {
-                        margin-bottom: 24px;
+                    .footer-menus-title {
+                        margin: 0 0 24px 52px;
+                        @include media-down(md) {
+                            margin-left: 0;
+                        }
                     }
                 }
             }
             &-left {
                 max-width: 35%;
                 margin-bottom: 104px;
-                @include media-down('840px') {
+                @include media-down(md) {
                     max-width: 100%;
                     margin-bottom: 48px;
                 }
                 .footer-text {
-                    @include media-down('840px') {
-                        margin-bottom: 48px;
-                    }
+                    letter-spacing: 0.3px;
                     p {
                         color: $colorText-secondary;
                         font-size: $min-size;
@@ -104,37 +155,50 @@
             }
         }
         .footer-contacts {
-            @include media-down('520px') {
+            .footer-menus-title {
+                margin-bottom: 24px;
+            }
+            @include media-down(s) {
                 margin-top: 48px;
             }
-            .footer-contact {
-                li a {
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 24px;
-                    color: $white;
-                    font-size: 14px;
-                    line-height: 20px;
-                    font-weight: 500;
-                    transition: color .3s;
-                    &:hover {
-                        color: $hover-color;
-                    }
-                    svg {
-                        margin-right: 10px;
-                        transition: color .3s;
-                        & path {
-                            transition: fill .3s;
-                        }
-                    }
-                    &:hover svg path {
-                        fill: $hover-color;
-                    }
-                    @include media-down('520px') {
-                        margin-bottom: 32px;
-                    }
+            .footer-nav {
+                @include media-down(s) {
+                    margin-bottom: 32px;
                 }
             }
+            .footer-contact {
+                li {
+                    margin-bottom: 24px;
+                    @include media-down(md) {
+                        margin-bottom: 32px;
+                    }
+                    a {
+                        display: flex;
+                        align-items: center;
+                        color: $white;
+                        font-size: 14px;
+                        line-height: 20px;
+                        font-weight: 500;
+                        transition: color .3s;
+                        &:hover {
+                            color: $hover-color;
+                        }
+                        svg {
+                            margin-right: 10px;
+                            transition: color .3s;
+                            & path {
+                                transition: fill .3s;
+                            }
+                        }
+                        &:hover svg path {
+                            fill: $hover-color;
+                        }
+                        @include media-down(s) {
+                            margin-bottom: 32px;
+                        }
+                    }
+                } 
+            }
         }
-    }
+    }  
 }

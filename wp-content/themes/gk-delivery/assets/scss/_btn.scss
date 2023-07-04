@@ -22,11 +22,6 @@
         z-index: 1;
         padding: 12px 40px;
         overflow: hidden;
-        @include media-down('540px') {
-            padding: 8px 12px;
-            font-size: $mobile-size;
-            line-height: $mobile-height;
-        }
         &::after {
             content: '';
             background-color: $hover-btn;
@@ -48,12 +43,12 @@
 	&-secondary {
         font-weight: 700;
         font-size: $sm-size;
-        line-height: 26px;
+        line-height: $sm-height;
         padding: 16px 40px;
         position: relative;
         overflow: hidden;
         z-index: 1;
-        @include media-down('872px') {
+        @include media-down(ms) {
             padding: 14px 40px;
             font-size: $base-size;
             line-height: $base-height;

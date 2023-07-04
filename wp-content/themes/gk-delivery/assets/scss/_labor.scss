@@ -4,12 +4,12 @@
     &-global {
         .colons-slider {
             margin: 40px 0 56px -12px;
-            @include media-down('980px') {
+            @include media-down(xl) {
                 display: flex;
                 flex-wrap: wrap;
                 position: relative;
                 z-index: 1;
-                margin: 25px -12px;
+                margin: 24px 0 40px -12px;
                 .slick-list {
                     padding-right: 95px;
                 }
@@ -22,21 +22,30 @@
             .labor-col {
                 padding: 0 12px;
                 width: 25%;
-                @include media-down('980px') {
+                @include media-down(xl) {
                     padding: 0 8px;
-                    width: 264px ;
                 }
                 .labor-card {
                     border-radius: 24px;
                     overflow: hidden;
                     background-color: $white;
                     box-shadow: 0px 8px 24px rgba(18, 18, 18, 0.1);
-                    height: 374px;
+                    height: 100%;
                 }
                 .labor-info {
-                    padding: 18px 24px;
-                    @include media-down('980px') {
-                        padding: 8px 16px;
+                    padding: 0 24px 24px;
+                    @include media-down(md) {
+                        padding: 16px;
+                    }
+                    .labor-title {
+                        margin: 16px 0 8px;
+                        @include media-down(ms) {
+                            margin: 8px 0 4px;
+                        }
+                        @include media-down(lsm) {
+                            font-size: $base-size;
+                            line-height: $base-height;
+                        }
                     }
                     .number p {
                         color: $color-number;
@@ -53,27 +62,31 @@
         }
         .labor-description {
             text-align: center;
-            margin: 16px 0 40px;
-        }
-        .labor-title {
-            margin: 16px 0 8px;
-        }
-        .labor-text {
-            margin-top: 8px;
+            margin-bottom: 40px;
+            @include media-down(md) {
+                margin-bottom: 24px;
+            }
+            .labor-title {
+                margin-bottom: 8px;
+            }
+            .labor-text {
+                letter-spacing: 0.2px;
+            }
         }
         .section-button {
             display: flex;
             justify-content: center;
             align-items: center;
             .btn-primary {
-                @include media-down('590px') {
+                @include media-down(s) {
                     width: 100%;
                 }
             }
         }
     }
-    .slick-slide {
-        height: 374px;
+    .slick-slider .slick-track,
+    .slick-slider .slick-list {
+        display: flex;
     }
     .slick-list {
         padding-bottom: 15px;
@@ -91,10 +104,11 @@ button.slick-next.slick-arrow {
 button.slick-prev.slick-arrow {
     background-image: url('../../assets/images/left.png');
     position: absolute;
+    background-repeat: no-repeat;
     z-index: 1;
     bottom: -40%;
     left: 45%;
-    @include media-down('520px') {
+    @include media-down(s) {
         left: 40%;
     }
 }
@@ -102,9 +116,10 @@ button.slick-next.slick-arrow {
     background-image: url('../../assets/images/right.png');
     position: absolute;
     z-index: 1;
+    background-repeat: no-repeat;
     bottom: -40%;
     right: 45%;
-    @include media-down('520px') {
+    @include media-down(s) {
         right: 40%;
     }
 }

@@ -14,10 +14,11 @@ jQuery(document).ready(function ($) {
       $('.header-wrapper').toggleClass('is-active');
   });
   $('.colons-slider').slick({
+      infinite: false,
       slidesToShow: 4,
       responsive: [
           {
-            breakpoint: 980,
+            breakpoint: 1044,
             settings: {
               slidesToShow: 3,
             }
@@ -33,7 +34,6 @@ jQuery(document).ready(function ($) {
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                infinite: false,
               }
             }
         ]
@@ -56,12 +56,27 @@ jQuery(document).ready(function ($) {
       $('#confirmation').modal('toggle');
     }, 2000)
   })
-  // $('html').bind('mouseleave', function() {
-  //   $('#modal-out').modal('show')
-  //   $('html').unbind('mouseleave');
-  // })
-  // $('.section-button .btn').on('click', function() {
-  //   $('#modal-out').modal('hide');
-  // })
+  $('html').bind('mouseleave', function() {
+    $('#modal-out').modal('show')
+    $('html').unbind('mouseleave');
+  })
+  $('.section-button .btn').on('click', function() {
+    $('#modal-out').modal('hide');
+  })
+
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("scroll").style.display = "block";
+    } else {
+      document.getElementById("scroll").style.display = "none";
+    }
+  }
+  $('#scroll').click(function() {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 1);
+  });
 });
 //# sourceMappingURL=main.js.map

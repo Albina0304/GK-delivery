@@ -18,6 +18,11 @@ body {
 	color: $color-title;
 	margin: 0;
     background-color: $body;
+    line-height: $base-height;
+    @include media-down(ms) {
+        font-size: $mobile-size;
+        line-height: $mobile-height;
+    }
 }
 a,
 button {
@@ -31,18 +36,9 @@ img {
     display: block;
     height: auto;
 }
-
-
 p {
-    font-weight: 400;
-    font-size: $base-size;
-    line-height: $base-height;
     color: $color-text;
     margin: 0;
-    @include media-down('890px') {
-        font-size: $mobile-size;
-        line-height: $mobile-height;
-    }
 }
 h1 {
     font-weight: 700;
@@ -50,11 +46,11 @@ h1 {
 	line-height: 68px;
 	margin: 0;
     color: $white;
-    @include media-down('1300px') {
-        font-size: 56px;
-        line-height: 58px;
+    @include media-down(xxl) {
+        font-size: $h1-size-xxl;
+        line-height: $h1-height-xxl;
     }
-    @include media-down('1120px') {
+    @include media-down(ml) {
         font-size: $mobile-big-size;
         line-height: $mobile-big-height;
     }
@@ -65,6 +61,10 @@ h3 {
 	line-height: $big-height;
 	margin: 0;
     color: $color-title;
+    @include media-down(md) {
+        font-size: $h3-mobsize;
+	    line-height: $h3-mobheight;
+    }
 }
 h4 {
     font-weight: 700;
@@ -82,4 +82,7 @@ h5 {
 }
 .section {
     margin: 104px 0;
+    @include media-down(ms) {
+        margin: 64px 0;
+    }
 }

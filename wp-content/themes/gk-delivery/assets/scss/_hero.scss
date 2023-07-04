@@ -5,7 +5,7 @@
         position: absolute;
         z-index: 1;
         top: 390px;
-        @include media-down('872px') {
+        @include media-down(ms) {
             display: none;
         }
     }
@@ -18,16 +18,17 @@
         justify-content: end;
         border-radius: 24px;
         overflow: hidden;
-        @include media-down('872px') {
+        @include media-down(ms) {
             flex-direction: column-reverse;
         }
         &-left {
-            max-width: 45%;
-            margin: 199px 20px 199px 44px;
-            @include media-down('1120px') {
+            max-width: 40%;
+            margin: 199px 20px 199px 104px;
+            // margin: 199px 20px 199px 44px;
+            @include media-down(xl) {
                 margin: 99px 20px 99px 44px;
             }
-            @include media-down('872px') {
+            @include media-down(ms) {
                 padding: 20px 16px 68px 16px;
                 display: flex;
                 flex-direction: column;
@@ -36,34 +37,41 @@
             }
             .hero-title {
                 margin-bottom: 16px;
-                @include media-down('872px') {
+                letter-spacing: 1px;
+                line-height: 71px;
+                @include media-down(xxl) {
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+                @include media-down(ms) {
                     margin-bottom: 4px;
                 }
-                @include media-down('460px') {
-                    font-size: 34px;
+                @include media-down(xs) {
+                    font-size: 32px;
                     line-height: 37px;
                 }
             }
             .hero-text {
                 margin: 16px 0 56px;
-                @include media-down('872px') {
+                letter-spacing: 0.2px;
+                @include media-down(ms) {
                     margin: 4px 0 20px;
                 }
             }
             .section-button {
-                @include media-down('872px') {
+                @include media-down(ms) {
                     margin-top: 20px;
                 }
             }
         }
         &-right {
-            @include media-down('872px') {
+            @include media-down(ms) {
                 display: flex;
                 justify-content: flex-end;
             }
         }
         .btn.btn-secondary {
-            @include media-down('560px') {
+            @include media-down(s) {
                 width: 100%;
             }
         }

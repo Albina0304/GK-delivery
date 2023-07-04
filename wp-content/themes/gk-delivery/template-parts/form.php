@@ -20,7 +20,7 @@ $form = get_field('forms');?>
                     <?php if ($form['form_image']) :?>
                         <div class="form-image">
                             <?php 
-                            echo wp_get_attachment_image($form['form_image']['ID'], 'full');?>
+                            echo wp_get_attachment_image($form['form_image']['ID'], 'form-img');?>
                         </div>
                     <?php endif;?>
                     <div class="form-application">

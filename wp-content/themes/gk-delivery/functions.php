@@ -37,6 +37,7 @@ if( function_exists('acf_add_options_page') ) {
 add_action('wp_enqueue_scripts', 'my_scripts');
 add_image_size( 'primary', 282, 126 );
 add_image_size( 'sm-img', 77, 80 );
+add_image_size( 'social-img', 16, 16 );
 add_image_size( 'form-img', 588, 328 );
 add_image_size( 'logo-size', 122, 34 );
 add_image_size( 'logo-size', 101, 28 );
@@ -47,3 +48,8 @@ function getImage($image) {
         return file_get_contents($image['url']);
     endif;
 }
+function register_custom_strings_for_translation() {
+    pll_register_string('Scroll Button', 'Догори');
+  }
+  add_action('init', 'register_custom_strings_for_translation');
+  

@@ -3,13 +3,15 @@
     padding: 0;
     list-style: none;
   }
-  @mixin media-down ($breakpoints) {
-    @media (max-width: $breakpoints) {
+  @mixin media-down ($name) {
+    $max: map-get($breakpoints, $name);
+    @media (max-width: $max) {
       @content;
     }
   }
-  @mixin media-up ($breakpoints) {
-    @media (min-width: $breakpoints) {
+  @mixin media-up ($name) {
+    $min: map-get($breakpoints, $name);
+    @media (min-width: $min) {
       @content;
     }
   }

@@ -4,6 +4,9 @@
         padding: 104px 0;
         border-top-right-radius: 24px;
         border-top-left-radius: 24px;
+        @include media-down(md) {
+            padding: 64px 0;
+        }
     }
     &-description {
         position: relative;
@@ -14,7 +17,10 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 40px;
-        @include media-down('720px') {
+        @include media-down(md) {
+            margin-bottom: 24px;
+        }
+        @include media-down(lsm) {
             justify-content: start;
             align-items: start;
             text-align: left;
@@ -23,22 +29,19 @@
             color: $white;
             margin-bottom: 8px;
             width: 60%;
-            @include media-down('920px') {
-                margin-bottom: 4px;
-            }
-            @include media-down('720px') {
+            letter-spacing: 0.5px;
+            @include media-down(xl) {
                 width: 100%;
-                font-size: 28px;
-                line-height: 32px;
+            }
+            @include media-down(md) {
+                font-size: $h3-mobsize;
+                line-height: $h3-mobheight;
             }
         }
         &-text {
+            letter-spacing: 0.5px;
             p {
                 color: $colorText-secondary;
-                @include media-down('720px') {
-                    // font-size: 13px;
-                    line-height: 19px;
-                }
             }
         }
     }
@@ -46,18 +49,18 @@
         display: flex;
         position: relative;
         z-index: 1;
-        @include media-down('920px') {
+        @include media-down(md) {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            max-width: 568px;
+            margin: 0 auto;
         }
     }
     &-image {
-        margin-right: 24px;
         display: flex;
-        @include media-down('920px') {
+        @include media-down(md) {
             margin: 0 0 24px 0;
-
         }
     }
     &-wrapper {
@@ -66,14 +69,17 @@
         &-button {
             margin-top: 40px;
             margin-bottom: 0;
-            @include media-down('960px') {
+            @include media-down(md) {
                 margin-top: 20px;
             }
             .btn-secondary {
                 border: none;
                 width: 100%;
-                font-size: 16px;
-                line-height: 22px;
+                font-size: $base-size;
+                line-height: $base-height;
+                @include media-down(md) {
+                    padding: 16px 40px;
+                }
             }
         }
         .label {
@@ -86,16 +92,18 @@
                 color: $color-text;
             }
             span {
-                color: #FF8178;
+                color: $star-color;
             }
         }
     }
 }
 .form-application {
     margin: 0;
-    width: 50%;
-    @include media-down('920px') {
+    width: 51%;
+    padding-left: 24px;
+    @include media-down(md) {
         width: 100%;
+        padding-left: 0;
     }
     input {
         padding: 17px 24px;
@@ -104,8 +112,8 @@
         font-size: $base-size;
         line-height: $base-height;
         font-weight: 400;
-        @include media-down('720px') {
-            padding: 15px 16px;
+        @include media-down(lsm) {
+            padding: 8px 16px;
         }
         &:focus {
             &::placeholder {
@@ -116,7 +124,7 @@
 }
 .wpcf7 form.failed {
     border-color: #dc3232;
-    color: white;
+    color: $white;
     padding: 10px;
 }
 .wpcf7 form.sent {
@@ -126,12 +134,15 @@
 }
 .wpcf7-not-valid-tip {
     position: absolute;
-    font-size: 14px;
+    font-size: $mobile-size;
     margin-top: 3px;
 }
 .wpcf7 form .wpcf7-response-output {
     margin: 20px 0 0 0;
     color: $white;
-    padding: 5px 0 5px 10px;
-    font-size: 12px;
+    padding: 0;
+    font-size: $min-size;
+    border: none;
+    border-bottom: 1px solid;
+    width: 60%;
 }

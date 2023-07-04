@@ -4,50 +4,56 @@
     .map {
         padding: 146px 0;
         background-color: $primary-color;
-        background-image: url('../../assets/images/Map.png');
+        background-image: url("../../assets/images/Map.png");
         background-repeat: no-repeat;
+        background-size: 100%;
         background-position: 100% 50%;
         border-radius: 24px;
-        @include media-down('840px') {
-            padding: 64px 0 257px;
-            background-image: url('../../assets/images/Map-mobile.png');
+        @include media-down(xl) {
+            background-size: 120%;
+        }
+        @include media-down(md) {
+            background-size: 160%;
+        }
+        @include media-down(lsm) {
+            padding: 64px 0 241px;
+            background-image: url('../../assets/images/Map-mob.png');
             background-size: 100%;
             background-position: 100% 100%;
+            background-repeat: no-repeat;
         }
         &-title {
             color: $white;
             margin-bottom: 8px;
-            @include media-down('740px') {
-                font-size: 28px;
-                line-height: 32px;
+            letter-spacing: 1.2px;
+            @include media-down(ms) {
+                font-size: $h3-mobsize;
+                line-height: $h3-mobheight;
             }
         }
         &-text {
             margin: 8px 0 56px;
-            @include media-down('1200px') {
+            letter-spacing: 0.4px;
+            @include media-down(xxl) {
                 margin-bottom: 40px;
             }
             p {
                 color: $colorText-secondary;
-                @include media-down('740px') {
-                    // font-size: 13px;
-                    // line-height: 19px;
-                }
             }
         }
         &-info {
-            @include media-down('1200px') {
+            @include media-down(xxl) {
                 background-color: rgba(4, 37, 89, .5);
                 display: inline-block;
                 padding-right: 10px;
             }
-            @include media-down('740px') {
+            @include media-down(xs) {
                 background-color: transparent;
                 padding-right: 0;
             }
             .section-button {
                 .btn-primary {
-                    @include media-down('480px') {
+                    @include media-down(s) {
                         width: 100%;
                     }
                 }

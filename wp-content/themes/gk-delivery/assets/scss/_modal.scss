@@ -1,34 +1,60 @@
-
-    .modal {
-        &-dialog {
-            max-width: 752px;
-        }
-        .modal-content {
-            padding: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            position: relative;
-            z-index: 1;
-        }
-        .btn-close {
-            position: absolute;
-            z-index: 1;
-            top: 13px;
-            right: 13px;
-        }
-        .title-modal {
-            margin: 15px 0 4px;
-        }
-        .text-modal {
-            text-align: center;
-            margin-top: 4px;
-        }
-        .text-modal.out {
-            margin-bottom: 28px;
-        }
-        .section-button {
-            margin-top: 28px;
+.modal {
+    &-dialog {
+        max-width: 752px;
+        margin: 0 auto;
+        @include media-down(lsm) {
+            max-width: 80%;
         }
     }
+    .modal-content {
+        padding: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+        @include media-down(lsm) {
+            padding: 16px;
+            align-items: flex-start;
+        }
+    }
+    .btn-close {
+        position: absolute;
+        z-index: 1;
+        top: 13px;
+        right: 13px;
+    }
+    .title-modal {
+        margin: 15px 0 4px;
+        @include media-down(lsm) {
+            margin: 8px 0 4px;
+            font-size: $base-size;
+            line-height: $base-height;
+        }
+    }
+    .text-modal {
+        text-align: center;
+        margin-top: 4px;
+        @include media-down(lsm) {
+            text-align: left;
+        }
+    }
+    .text-modal.out {
+        margin-bottom: 28px;
+        @include media-down(lsm) {
+            margin-bottom: 20px;
+        }
+    }
+    .section-button {
+        margin-top: 28px;
+        @include media-down(lsm) {
+            margin: 20px auto 0;
+        }
+    }
+    .image-modal {
+        @include media-down(lsm) {
+            margin: 0 auto;
+        }
+    }
+}

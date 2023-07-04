@@ -13,9 +13,11 @@ $header-top-bg:#021128;
 $header-bg:#F3F6FB;
 $border-color: #8192AC;
 $dropdown: #8899B4;
+$star-color: #FF8178;
 $base-size: 16px;
 $base-height: 22px;
 $sm-size: 18px;
+$sm-height: 26px;
 $big-size: 40px;
 $big-height: 48px;
 $min-size: 12px;
@@ -24,4 +26,20 @@ $mobile-size: 13px;
 $mobile-height: 19px;
 $mobile-big-size: 42px;
 $mobile-big-height: 44px;
+$h1-size-xxl: 56px;
+$h1-height-xxl: 58px;
+$h3-mobsize: 28px;
+$h3-mobheight: 32px;
 
+$breakpoints: (
+  xs: 460px,
+  s: 540px,
+  sm: 620px,
+  lsm: 768px,
+  ms: 872px,
+  md: 960px,
+  up: 961px,
+  xl: 1044px,
+  ml: 1120px,
+  xxl: 1300px
+);
