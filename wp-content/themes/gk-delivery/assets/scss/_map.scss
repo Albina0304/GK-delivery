@@ -6,15 +6,9 @@
         background-color: $primary-color;
         background-image: url("../../assets/images/Map.png");
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: cover;
         background-position: 100% 50%;
         border-radius: 24px;
-        @include media-down(xl) {
-            background-size: 120%;
-        }
-        @include media-down(md) {
-            background-size: 160%;
-        }
         @include media-down(lsm) {
             padding: 64px 0 241px;
             background-image: url('../../assets/images/Map-mob.png');

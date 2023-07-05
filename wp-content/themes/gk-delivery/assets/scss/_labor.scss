@@ -3,13 +3,13 @@
     z-index: 1;
     &-global {
         .colons-slider {
-            margin: 40px 0 56px -12px;
+            margin: 40px 0 30px -12px;
             @include media-down(xl) {
                 display: flex;
                 flex-wrap: wrap;
                 position: relative;
                 z-index: 1;
-                margin: 24px 0 40px -12px;
+                margin: 24px 0 14px -12px;
                 .slick-list {
                     padding-right: 95px;
                 }
@@ -22,8 +22,13 @@
             .labor-col {
                 padding: 0 12px;
                 width: 25%;
+                min-height: 374px;
+                min-width: 298px;
                 @include media-down(xl) {
                     padding: 0 8px;
+                }
+                @include media-down(xl) {
+                    min-width: 280px;
                 }
                 .labor-card {
                     border-radius: 24px;
@@ -89,37 +94,37 @@
         display: flex;
     }
     .slick-list {
-        padding-bottom: 15px;
+        padding-bottom: 26px;
     }
 }
 button.slick-prev.slick-arrow,
 button.slick-next.slick-arrow {
     font-size: 0;
-    padding: 10px;
     border: none;
     background-color: transparent;
     background-size: 100%;
     background-position: 100% 100%;
+    padding: 0;
+    width: 24px;
+    height: 24px;
 }
 button.slick-prev.slick-arrow {
-    background-image: url('../../assets/images/left.png');
+    background-image: url('../../assets/images/arrow_left.png');
     position: absolute;
     background-repeat: no-repeat;
     z-index: 1;
-    bottom: -40%;
-    left: 45%;
-    @include media-down(s) {
-        left: 40%;
-    }
+    bottom: -32%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -32px;
 }
 button.slick-next.slick-arrow {
-    background-image: url('../../assets/images/right.png');
+    background-image: url('../../assets/images/arrow_right.png');
     position: absolute;
     z-index: 1;
     background-repeat: no-repeat;
-    bottom: -40%;
-    right: 45%;
-    @include media-down(s) {
-        right: 40%;
-    }
+    bottom: -32%;
+    right: 50%;
+    transform: translateX(50%);
+    margin-right: -32px;
 }

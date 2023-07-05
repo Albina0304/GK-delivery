@@ -28,6 +28,7 @@
     &-col {
         padding: 12px;
         width: 33.3%;
+        min-height: 218px;
         @include media-down(md) {
             width: 50%;
             padding: 8px;
@@ -64,11 +65,13 @@
         }
     }
     &-img {
-        margin-bottom: 16px;
+        width: 72px;
+        height: 72px;
+        margin: 0 auto 16px;
         display: flex;
         justify-content: center;
         @include media-down(ms) {
-            margin-bottom: 8px;
+            margin: 0 auto 8px;
         }
         
     }

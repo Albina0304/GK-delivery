@@ -1,3 +1,9 @@
 <?php get_header()?>
-<?php echo '404 not found!';?>
+<div class="section-404">
+    <div class="container">
+        <h1>
+            404<br>not found!
+        </h1>
+    </div>
+</div>
 <?php get_footer()?>

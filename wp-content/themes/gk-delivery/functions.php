@@ -27,8 +27,8 @@ add_action('wp_enqueue_scripts', 'my_scripts');
 
 if( function_exists('acf_add_options_page') ) {
     acf_add_options_page(array(
-        'page_title'    => 'Theme General Settings',
-        'menu_title'    => 'Theme Settings',
+        'page_title'    => 'Налаштування головної теми',
+        'menu_title'    => 'Налаштування теми',
         'menu_slug'     => 'theme-general-settings',
         'capability'    => 'edit_posts',
         'redirect'      => false
@@ -36,6 +36,7 @@ if( function_exists('acf_add_options_page') ) {
 }
 add_action('wp_enqueue_scripts', 'my_scripts');
 add_image_size( 'primary', 282, 126 );
+add_image_size( 'modal', 80, 80 );
 add_image_size( 'sm-img', 77, 80 );
 add_image_size( 'social-img', 16, 16 );
 add_image_size( 'form-img', 588, 328 );

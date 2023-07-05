@@ -1,6 +1,25 @@
 //=../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
 //=../../node_modules/slick-carousel/slick/slick.min.js
 jQuery(document).ready(function ($) {
+  function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
   $('#burger-nav').click(function(){
       $(this).toggleClass('open');
   });
@@ -50,15 +69,18 @@ jQuery(document).ready(function ($) {
       $('#confirmation').modal('toggle');
     }, 2000)
   })
-  $('html').bind('mouseleave', function() {
-    $('#modal-out').modal('show')
-    $('html').unbind('mouseleave');
-  })
-  $('.section-button .btn').on('click', function() {
-    $('#modal-out').modal('hide');
-  })
-
+  if(!getCookie('modal_show')) {
+    $('html').bind('mouseleave', function() {
+      $('#modal-out').modal('show')
+      $('html').unbind('mouseleave');
+      setCookie('modal_show', '1', 1);
+    })
+    $('.section-button .btn').on('click', function() {
+      $('#modal-out').modal('hide');
+    })
+  }
   window.onscroll = function() {scrollFunction()};
+  window.onload = function() {scrollFunction()};
 
   function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
