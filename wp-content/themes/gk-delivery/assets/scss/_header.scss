@@ -313,8 +313,10 @@
                     padding: 0 12px;
                 }
                 @include media-down(md) {
-                    font-size: $sm-size;
                     line-height: 20px;
+                    font-size: 17px;
+                    letter-spacing: 0.6px;
+                    padding: 0 0 0 22px;
                 }
                 &:hover {
                     color: $hover-color;
@@ -429,14 +431,14 @@
             font-weight: 500;
         }
         .menu-item-object-custom {
-            padding: 24px 0;
+            margin: 24px 0;
         }
     }
     #menu-main,
     #menu-main-ru,
     #menu-menu-pl {
         @include media-down(md) {
-            padding: 156px 0;
+            padding: 140px 0;
         }
     }
 }

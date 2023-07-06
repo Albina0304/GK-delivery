@@ -74,7 +74,9 @@
             color: $colorText-secondary;
             font-size: $min-size;
             line-height: $min-height;
-            margin: 16px 0;
+            @include media-down(xs) {
+                margin-bottom: 16px;
+            }
         }
         .footer-global {
             display: flex;
@@ -152,7 +154,7 @@
                 margin-bottom: 24px;
             }
             @include media-down(s) {
-                margin-top: 48px;
+                margin-top: 24px;
             }
             .footer-nav {
                 @include media-down(s) {
@@ -195,8 +197,14 @@
         }
     } 
     &-bottom {
+        margin: 16px 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include media-down(xs) {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
     } 
 }

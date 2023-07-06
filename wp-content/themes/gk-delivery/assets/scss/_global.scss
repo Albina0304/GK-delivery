@@ -10,6 +10,9 @@
     max-width: 1448px;
     margin: 0 auto;
     padding: 0 20px;
+    @include media-down(xs) {
+        padding: 0;
+    }
 }
 body {
     font-family: 'Mulish', sans-serif;
@@ -88,4 +91,10 @@ h5 {
 }
 .wrapper {
     padding-top: 97px;
+    @include media-down(md) {
+        padding-top: 107px;
+    }
+    @include media-down(lsm) {
+        padding-top: 119px;
+    }
 }
