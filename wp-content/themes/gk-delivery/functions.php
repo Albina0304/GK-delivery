@@ -42,9 +42,9 @@ add_image_size( 'social-img', 16, 16 );
 add_image_size( 'form-img', 588, 328 );
 add_image_size( 'logo-size', 122, 34 );
 add_image_size( 'logo-size', 101, 28 );
-function getImage($image) {
+function getImage($image, $size = false) {
     if($image['mime_type'] !== 'image/svg+xml'):
-    return wp_get_attachment_image($image['ID'], 'full');
+    return wp_get_attachment_image($image['ID'], $size ? $size : 'full');
     else:
         return file_get_contents($image['url']);
     endif;

@@ -22,7 +22,7 @@ $odds = get_field('odds');?>
                         <div class="odds-info">
                             <?php if ($odd_repeater['image']) :?>
                                 <div class="odds-img">
-                                    <?php echo wp_get_attachment_image($odd_repeater['image']['ID'], 'thumbnail') ;?>
+                                    <?php echo getImage($odd_repeater['image'], 'thumbnail') ;?>
                                 </div>
                             <?php endif;?> 
                             <?php if ($odd_repeater['title']) :?>

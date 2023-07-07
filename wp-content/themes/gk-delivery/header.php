@@ -84,7 +84,7 @@
                         $link = get_field('btn_primary');
                         if( $link ): 
                             $link_target = $link['target'] ? $link['target'] : '_self';?>
-                            <a class="btn btn-primary" href="#contacts" target="<?php echo esc_attr( $link['title'] ); ?>">
+                            <a class="btn btn-primary" href="<?php echo get_home_url();?>/#contacts">
                                 <?php echo esc_html( $link['title'] ); ?>
                             </a>
                         <?php endif; ?>

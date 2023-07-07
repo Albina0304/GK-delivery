@@ -114,7 +114,8 @@
             }
         }
         .dropdown-menu.show {
-            padding: 8px
+            padding: 8px;
+            min-width: 200px; 
         }
         .dropdown-menu.dropdown-mobile.show {
             li {

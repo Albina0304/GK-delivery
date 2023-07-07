@@ -26,11 +26,9 @@ function getCookie(name) {
     }
     return null;
 }
-  $('#burger-nav').click(function(){
-      $(this).toggleClass('open');
-  });
-  $('.header-burger').on ('click', function(e) {
+  $('.header-burger, .menu-item a').on ('click', function(e) {
       $('.header-wrapper').toggleClass('is-active');
+      $('#burger-nav').toggleClass('open');
   });
   $('.colons-slider').slick({
       infinite: false,
