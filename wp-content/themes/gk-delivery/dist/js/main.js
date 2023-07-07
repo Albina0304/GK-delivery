@@ -26,7 +26,7 @@ function getCookie(name) {
     }
     return null;
 }
-  $('.header-burger, .menu-item a').on ('click', function(e) {
+  $('.header-burger, .header-wrapper li a').on ('click', function(e) {
       $('.header-wrapper').toggleClass('is-active');
       $('#burger-nav').toggleClass('open');
   });

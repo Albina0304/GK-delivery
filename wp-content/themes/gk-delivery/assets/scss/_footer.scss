@@ -29,16 +29,20 @@
             display: none;
         }
         li {
-            @include media-down(md) {
-                padding: 0 21px;
-            }
             a {
+                @include media-down(md) {
+                    padding: 20px;
+                }
                 svg path {
                     transition: fill 0.3s; 
                 }
                 &:hover svg path {
                     fill: $color-number;
                 }
+            }
+            svg {
+                width: 20px;
+                height: 20px;
             }
         }
     }

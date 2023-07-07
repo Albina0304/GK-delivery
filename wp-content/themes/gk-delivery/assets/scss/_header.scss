@@ -87,6 +87,7 @@
             text-transform: uppercase;
             font-size: $min-size;
             transition: color .3s;
+            outline: none;
             svg path {
                 transition: fill .3s;
             }
@@ -133,6 +134,8 @@
             @include reset-list;
             @include media-down(md) {
                 flex-direction: column;
+                flex: 1;
+                width: 100%;
             }
             li {
                 display: flex;
@@ -194,6 +197,9 @@
             @include media-down(md) {
                 flex-direction: column;
                 margin: 0;
+                display: flex;
+                flex: 1;
+                width: 100%;
             }
             svg {
                 @include media-down(md) {
@@ -207,7 +213,7 @@
             }
             li {
                 padding: 0 12px;
-                display: flex;
+                // display: flex;
                 align-items: flex-start;
                 @include media-down(md) {
                     padding: 13px 0;
