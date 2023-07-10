@@ -147,6 +147,7 @@
                     margin-right: 56px;
                     transition: color .3s;
                     letter-spacing: 0.6px;
+                    display: flex;
                     &:hover {
                         color: $color-number;
                         & svg path {
