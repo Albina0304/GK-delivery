@@ -165,7 +165,7 @@
                     "collapsed": "",
                     "min": 0,
                     "max": 0,
-                    "layout": "table",
+                    "layout": "block",
                     "button_label": "",
                     "sub_fields": [
                         {
@@ -358,7 +358,7 @@
                     "collapsed": "",
                     "min": 0,
                     "max": 0,
-                    "layout": "table",
+                    "layout": "block",
                     "button_label": "",
                     "sub_fields": [
                         {
@@ -384,25 +384,6 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
-                        },
-                        {
-                            "key": "field_64959040f1339",
-                            "label": "Цифра",
-                            "name": "number",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
-                            "delay": 0
                         },
                         {
                             "key": "field_6495904bf133a",
@@ -544,5 +525,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688980393
+    "modified": 1688987168
 }

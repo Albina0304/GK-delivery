@@ -18,7 +18,7 @@ $labor = get_field('labor');?>
             <div class="colons-slider">
                 <?php
                 if(isset($labor['repeater'])):
-                    foreach($labor['repeater'] as $labor_repeater) { ?>
+                    foreach($labor['repeater'] as $key => $labor_repeater) { ?>
                         <div class="labor-col">
                             <div class="labor-card">
                                 <?php if ($labor_repeater['image']) :?>
@@ -27,11 +27,9 @@ $labor = get_field('labor');?>
                                     </div>
                                 <?php endif;?>
                                 <div class="labor-info">
-                                    <?php if ($labor_repeater['number']) :?>
-                                        <div class="number">
-                                            <?php echo ($labor_repeater['number']) ;?>
-                                        </div>
-                                    <?php endif;?>
+                                    <div class="number">
+                                        <?php echo $key + 1 ;?>
+                                    </div>
                                     <?php if ($labor_repeater['title']) :?>
                                         <h4 class="labor-title">
                                             <?php echo ($labor_repeater['title']) ;?>
