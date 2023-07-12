@@ -96,10 +96,17 @@ h5 {
 }
 .wrapper {
     padding-top: 97px;
+    overflow: hidden;
     @include media-down(md) {
         padding-top: 107px;
     }
     @include media-down(lsm) {
         padding-top: 119px;
+    }
+}
+.customize-support {
+    padding-top: 32px;
+    .header {
+        top: 32px;
     }
 }

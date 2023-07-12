@@ -98,5 +98,13 @@ function getCookie(name) {
       scrollTop: 0
     }, 1);
   });
+  $('.header-wrapper a').click(function(e) {
+    e.preventDefault();
+    var linkid = $(this).attr('href');
+    var headerHeight = $('.header').outerHeight();
+    $('html, body').animate({
+      scrollTop: $(linkid).offset().top - headerHeight
+    }, 1);
+  });
 });
 //# sourceMappingURL=main.js.map
