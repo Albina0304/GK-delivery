@@ -4,9 +4,9 @@ $odds = get_field('odds');?>
     <div class="container">
         <div class="odds-description">
             <?php if ($odds['title']) :?>
-                <h3 class="odds-title">
+                <h2 class="odds-title">
                     <?php echo $odds['title'];?>
-                </h3>
+                </h2>
             <?php endif;?>
             <?php if ($odds['text']) :?>
                 <div class="odds-text">
@@ -26,9 +26,9 @@ $odds = get_field('odds');?>
                                 </div>
                             <?php endif;?> 
                             <?php if ($odd_repeater['title']) :?>
-                                <h4 class="odds-title">
+                                <h3 class="odds-title">
                                     <?php echo ($odd_repeater['title']) ;?>
-                                </h4>
+                                </h3>
                             <?php endif;?>
                             <?php if ($odd_repeater['text']) :?>
                                 <div class="odds-text">

@@ -37,8 +37,8 @@
                 width: 100%;
             }
             @include media-down(md) {
-                font-size: $h3-mobsize;
-                line-height: $h3-mobheight;
+                font-size: $h2-mobsize;
+                line-height: $h2-mobheight;
             }
         }
         &-text {
@@ -117,7 +117,7 @@
         font-weight: 400;
         @include media-down(lsm) {
             padding: 8px 16px;
-            line-height: $h3-mobheight;
+            line-height: $h2-mobheight;
         }
         &:focus {
             &::placeholder {

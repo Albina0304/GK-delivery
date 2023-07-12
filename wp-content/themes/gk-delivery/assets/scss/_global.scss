@@ -63,25 +63,25 @@ h1 {
         line-height: $mobile-big-height;
     }
 }
-h3 {
+h2 {
     font-weight: 700;
 	font-size: $big-size;
 	line-height: $big-height;
 	margin: 0;
     color: $color-title;
     @include media-down(md) {
-        font-size: $h3-mobsize;
-	    line-height: $h3-mobheight;
+        font-size: $h2-mobsize;
+	    line-height: $h2-mobheight;
     }
 }
-h4 {
+h3 {
     font-weight: 700;
     font-size: $sm-size;
     line-height: 26px;
 	margin: 0;
     color: $color-title;
 }
-h5 {
+h4 {
     font-weight: 700;
     font-size: $base-size;
     line-height: $base-height;

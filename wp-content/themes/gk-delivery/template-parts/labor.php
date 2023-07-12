@@ -5,9 +5,9 @@ $labor = get_field('labor');?>
         <div class="labor-global">
             <div class="labor-description">
                 <?php if ($labor['title']) :?>
-                    <h3 class="labor-title">
+                    <h2 class="labor-title">
                         <?php echo $labor['title'];?>
-                    </h3>
+                    </h2>
                 <?php endif;?>
                 <?php if ($labor['text']) :?>
                     <div class="labor-text">
@@ -31,9 +31,9 @@ $labor = get_field('labor');?>
                                         <?php echo $key + 1 ;?>
                                     </div>
                                     <?php if ($labor_repeater['title']) :?>
-                                        <h4 class="labor-title">
+                                        <h3 class="labor-title">
                                             <?php echo ($labor_repeater['title']) ;?>
-                                        </h4>
+                                        </h3>
                                     <?php endif;?>
                                     <?php if ($labor_repeater['text']) :?>
                                         <div class="labor-text">

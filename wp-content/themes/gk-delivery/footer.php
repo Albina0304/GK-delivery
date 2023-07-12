@@ -29,9 +29,9 @@
                                 <div class="footer-global-right">
                                     <div class="footer-menus">
                                         <?php if (isset($menus_title)):?>
-                                            <h5 class="footer-menus-title">
+                                            <h4 class="footer-menus-title">
                                                 <?php echo $menus_title;?>
-                                            </h5>
+                                            </h4>
                                         <?php endif;?>
                                         <?php
                                         $menu_args = array(
@@ -42,9 +42,9 @@
                                     </div>
                                     <div class="footer-contacts">
                                         <?php if (isset($contacts_title)):?>
-                                            <h5 class="footer-menus-title">
+                                            <h4 class="footer-menus-title">
                                                 <?php echo $contacts_title;?>
-                                            </h5>
+                                            </h4>
                                         <?php endif;?>
                                         <nav class="footer-nav">
                                             <ul class="footer-contact">

@@ -31,7 +31,7 @@ $hero = get_field('hero');?>
             <div class="hero-general-right">
                 <?php if ($hero['image']) :?>
                     <div class="hero-general-right-img">
-                        <?php echo wp_get_attachment_image($hero['image']['ID'], 'full');?>
+                        <?php echo wp_get_attachment_image($hero['image']['ID'], 'full',);?>
                     </div>
                 <?php endif; ?>
             </div>

@@ -6,9 +6,9 @@ $maps = get_field('maps');?>
             <div class="container">
                 <div class="map-info">
                     <?php if ($maps['title']) :?>
-                        <h3 class="map-title">
+                        <h2 class="map-title">
                             <?php echo $maps['title'];?>
-                        </h3>
+                        </h2>
                     <?php endif;?>
                     <?php if ($maps['text']) :?>
                         <div class="map-text">

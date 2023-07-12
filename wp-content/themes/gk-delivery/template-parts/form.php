@@ -6,9 +6,9 @@ $form = get_field('forms');?>
             <div class="container">
                 <div class="form-description">
                     <?php if ($form['form_title']) :?>
-                        <h3 class="form-description-title">
+                        <h2 class="form-description-title">
                             <?php echo $form['form_title'] ;?>
-                        </h3>
+                        </h2>
                     <?php endif;?>
                     <?php if ($form['form_text']) :?>
                         <div class="form-description-text">

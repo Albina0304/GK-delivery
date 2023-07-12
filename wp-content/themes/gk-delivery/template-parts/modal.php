@@ -10,9 +10,9 @@
                     </div>
                 <?php endif;?>
                 <?php if ($modconf['title']) :?>
-                    <h4 class="title-modal">
+                    <h3 class="title-modal">
                         <?php echo pll__($modconf['title']);?>
-                    </h4>
+                    </h3>
                 <?php endif;?>
                 <?php if ($modconf['text']) :?>
                     <div class="text-modal">
@@ -34,9 +34,9 @@
                     </div>
                 <?php endif;?>
                 <?php if ($modal_out['title']) :?>
-                    <h4 class="title-modal">
+                    <h3 class="title-modal">
                         <?php echo $modal_out['title'];?>
-                    </h4>
+                    </h3>
                 <?php endif;?>
                 <?php if ($modal_out['text']) :?>
                     <div class="text-modal out">

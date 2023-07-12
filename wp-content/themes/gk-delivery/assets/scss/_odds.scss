@@ -9,8 +9,8 @@
             margin-bottom: 8px;
             letter-spacing: 1px;
             @include media-down(sm) {
-                font-size: $h3-mobsize;
-                line-height: $h3-mobheight;
+                font-size: $h2-mobsize;
+                line-height: $h2-mobheight;
             }
         }
     }
